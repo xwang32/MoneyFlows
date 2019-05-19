@@ -6,6 +6,8 @@ MoneyFlows consists of a web-based tool designed to facilate new grads to manage
 * [Dialogflow](https://dialogflow.com/) - a cloud platform that provides several NLP functions that parse user input and match them to the right response
 
 ## Demo - chatbot
+Here is a quick demo of the investment advisor (chatbot):
+
 ![head](/img/head.png)
 
 ![example msg 1](/img/msg1.png)
