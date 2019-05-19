@@ -5,6 +5,16 @@ MoneyFlows consists of a web-based tool designed to facilate new grads to manage
 * Express - fast node.js network app framework
 * [Dialogflow](https://dialogflow.com/) - a cloud platform that provides several NLP functions that parse user input and match them to the right response
 
+## Demo - budget calculator
+Here is a quick demo of the budget calculator:
+
+![pic 1](/img/landpage.png)
+
+![pic 2](/img/web1.png)
+
+![pic 3](/img/web2.png)
+
+
 ## Demo - chatbot
 Here is a quick demo of the investment advisor (chatbot):
 
