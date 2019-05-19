@@ -1,0 +1,396 @@
+<!doctype html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1" >
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" >
+<meta name="description" content="Use the credit card repayment calculator to determine how long it will take for you to pay off all of your student debt. The repayment calculator analyzes your monthly payments, interest rates, and over all debt." >
+<meta name="keywords" content="dept repayment calculator" >
+<meta name="viewport" content="width=device-width, user-scalable=yes" >
+<meta name="og:title" content="YourMoneyFlows" >
+<meta name="og:type" content="company" >
+<meta name="og:description" content="Use the credit card repayment calculator to determine how long it will take for you to pay off all of your debt. The repayment calculator analyzes your monthly payments, interest rates, and over all debt." >
+<meta name="og:image:type" content="image/jpg" >
+<meta name="og:site_name" content="YourMoneyFlows" >
+<meta name="format-detection" content="telephone=no" >
+<title>Student Loan Repayment Calculator </title>
+<link href="https://creditkarmacdn-a.akamaihd.net/ckfiles.com/assets/1086467273919/res/out/base_styles.css" media="all" rel="stylesheet" type="text/css" >
+
+<script type="text/javascript">
+    //<!--
+    !function(e){function t(n){if(r[n])return r[n].exports;var i=r[n]={exports:{},id:n,loaded:!1};return e[n].call(i.exports,i,i.exports,t),i.loaded=!0,i.exports}var r={};return t.m=e,t.c=r,t.p="",t(0)}([function(e,t,r){e.exports=r(1)},function(e,t,r){"use strict";var n=r(2);(0,n.initialize)()},function(e,t){"use strict";function r(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}function n(e,t){for(var r in e)e.hasOwnProperty(r)&&t(r,e[r])}function i(e,t){a(e,t)}function a(e,t){if(!window.galaxyArtifacts)throw new Error("Cannot register an artifact before initializing GalaxyArtifacts.");window.galaxyArtifacts.setRenderer(e,t)}function o(){if(window.galaxyArtifacts)throw new Error("Cannot create another instance of galaxyArtifacts, as there should only ever be one.");var e=window.galaxyArtifacts=new c;window.addEventListener("load",function(){e.flush()})}Object.defineProperty(t,"__esModule",{value:!0});var s=function(){function e(e,t){for(var r=0;r<t.length;r++){var n=t[r];n.enumerable=n.enumerable||!1,n.configurable=!0,"value"in n&&(n.writable=!0),Object.defineProperty(e,n.key,n)}}return function(t,r,n){return r&&e(t.prototype,r),n&&e(t,n),t}}();t.registerArtifactType=i,t.setRenderer=a,t.initialize=o;var f="mode_eager",c=function(){function e(){var t=this;r(this,e),this.typeRenderers={},this.artifactMap={},this.typeRenderCount={},this.renderArtifactsOfType=function(e){var r=t.artifactMap[e];t.artifactMap[e]=[],r&&r.forEach(t.renderArtifact)},this.renderArtifact=function(e){var r=e.type,n=t.getRenderer(r);if(!n)throw new Error("Renderer for type "+r+" not found.");t.countRender(r),n(e)},this.getRenderer=function(e){return t.typeRenderers[e]}}return s(e,[{key:"registerArtifact",value:function(e){var t=e.type,r=this.artifactMap[t]=this.artifactMap[t]||[];this.mode===f?this.renderArtifact(e):r.push(e)}},{key:"setRenderer",value:function(e,t){this.typeRenderers[e]&&console.warn("There is already an artifact with the key: "+e),this.typeRenderers[e]=t,this.renderArtifactsOfType(e)}},{key:"setEager",value:function(){this.mode=f}},{key:"flush",value:function(){this.setEager(),this.renderAll(),this.handleUnrendered(),this.warnUnused()}},{key:"renderAll",value:function(){n(this.artifactMap,this.renderArtifactsOfType)}},{key:"countRender",value:function(e){var t=this.typeRenderCount;t[e]||(t[e]=0),t[e]+=1}},{key:"warnUnused",value:function(){var e=this,t=[];n(this.typeRenderers,function(r){return e.typeRenderCount[r]?null:t.push(r)}),t.forEach(function(e){return console.warn("Artifact renderer for type "+e+" was included but never used.")})}},{key:"handleUnrendered",value:function(){var e=[];if(n(this.artifactMap,function(t,r){(null!==r||0!==r)&&r.forEach(function(t){return e.push(t)})}),e&&e.length>0)throw new Error("Unable to render the following artifacts because a renderer\n                            with their type was never registered. "+JSON.stringify(e))}}]),e}();t.GalaxyArtifacts=c}]);    //-->
+</script>
+<script type="text/javascript">
+    //<!--
+    var PROTOCOL                 = window.document.location.protocol + '//',
+    HOSTBASE                 = 'www.creditkarma.com',
+    BASE_URL                 = PROTOCOL + HOSTBASE,
+    MEDIA_URL                = 'https://creditkarmacdn-a.akamaihd.net/ckfiles.com/assets/1086467273919',
+    TRKCK                    = 'CKTRKID',
+    CSRF_TOKEN               = '381fc7f089943bee90263f7316955058e74b4e4e18eafd66ea5d4f41dd016154',
+    CSRF_HEADER_STRING       = 'X_CSRF_TOKEN',
+    CKEDITOR_BASEPATH        = 'https://creditkarmacdn-a.akamaihd.net/ckfiles.com/assets/1086467273919/res/js/lib/ckeditor/',
+    SOCKET_SERVER            = false,
+    SOCKET_ROOM              = false,
+    CK                       = parent.CK || {},
+    USER_CAN_VIEW_REPORT     = false,
+    USER_YI_COUNT            = 0,
+    BCBDATA                  = false,
+    USER_REQUIRES_SCREENNAME = false,
+    OVKWID                   = null,
+
+    IS_PRODUCTION            = true,
+    TRACE_ID                 = '9acb8337-2f2d-441c-b6b5-5d4ca268ec04',
+    EMPTY_TRACE_ID           = '00000000-0000-0000-0000-000000000000',
+    USER_META_DATA_ID        = 516277036,
+    REQUEST_ID               = 984755912,
+    PREVIOUS_REQUEST_ID      = null,
+    USER_PROPERTIES          = '{"TraceId":"9acb8337-2f2d-441c-b6b5-5d4ca268ec04","UserMetaDataId":2028747818,"RegistrationMonth":"","EquifaxScoreRating":"N\/A","TransunionScoreRating":"N\/A","AgeBand":"N\/A","releaseVersion":"v19.20B.06"}',
+    AMPLITUDE_API_KEY        = '8355b60127e700cb74a41fd579306156',
+    AMPLITUDE_BATCHING       = true,
+    AMPLITUDE_SEND           = true,
+    IN_APP_BROWSER           = false;
+CK.sessionIdleTime           = 600000;
+
+var FRAUD_DETECT_CONFIG      = null;
+
+
+var IS_UPSWING = true;
+
+var SSO_SESSION = true;
+
+    //-->
+</script>
+<script type="text/javascript" crossorigin="anonymous" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+<script type="text/javascript" src="https://creditkarmacdn-a.akamaihd.net/ckfiles.com/assets/1086467273919/res/out/everywhere.js"></script>
+<script type="text/javascript" src="https://creditkarmacdn-a.akamaihd.net/ckfiles.com/assets/1086467273919/res/out/default.js"></script>
+
+<link rel="apple-touch-icon" sizes="180x180" href="https://ck-assets.imgix.net/assets/1.43.1/favicons/apple-touch-icon.png">
+<link rel="icon" type="image/png" href="https://ck-assets.imgix.net/assets/1.43.1/favicons/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="https://ck-assets.imgix.net/assets/1.43.1/favicons/favicon-32x32.png?h=16&w=16" sizes="16x16">
+<link rel="manifest" href="https://creditkarmacdn-a.akamaihd.net/res/content/bundles/assets/1.45.4/homepage/manifest.json">
+<link rel="mask-icon" href="https://creditkarmacdn-a.akamaihd.net/res/content/bundles/assets/1.43.1/favicons/safari-pinned-tab.svg" color="#3ddb93">
+<link rel="shortcut icon" href="https://creditkarmacdn-a.akamaihd.net/res/content/bundles/assets/1.43.1/favicons/favicon.ico">
+<meta name="msapplication-config" content="https://creditkarmacdn-a.akamaihd.net/res/content/bundles/assets/1.43.1/favicons/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+</head>
+<body class="notAuthed default default-calculators default-calculators-debtrepayment upswing responsive" data-onready-hook="default/calculators/debt_repayment">
+
+
+<div id="fb-root"></div>
+<!--[if lte IE 9]>
+<div id="ie9Warning" ck-alert="emphasized" style="display: block; padding: 15px 0;">
+    <p style="display: inline-block;">
+        Internet Explorer 9 and earlier versions are not supported.<br />
+        <span ck-text="light tiny">Upgrade your browser for the best experience.</span>
+    </p>
+    <a href="https://www.google.com/chrome/browser" target="_blank"><img src='https://creditkarmacdn-a.akamaihd.net/ckfiles.com/assets/1086467273919/res/images/browsers/browser-chrome.png' height='40' alt='Chrome' /></a>
+    <a href="https://www.mozilla.org/en-US/firefox/new/" target="_blank"><img src='https://creditkarmacdn-a.akamaihd.net/ckfiles.com/assets/1086467273919/res/images/browsers/browser-firefox.png' height='40' alt='Firefox' /></a>
+    <a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie" target="_blank"><img src='https://creditkarmacdn-a.akamaihd.net/ckfiles.com/assets/1086467273919/res/images/browsers/browser-ie.png' height='40' alt='Internet Explorer' /></a>
+    <a href="#" onclick="this.parentNode.style.display = 'none'">
+        <img src='https://creditkarmacdn-a.akamaihd.net/ckfiles.com/assets/1086467273919/res/images/layout_images/ieWarningClose.gif' alt='close' class='fr closeInfo' style='padding-top: 15px; padding-right: 20px;' />    </a>
+</div>
+<![endif]-->
+<script>window.RETROVISION = (function(r) { r["navi"] = r["navi"] || {}; r["navi"]["5ce0bddfba6fc"] = {"recommendations":"1","variation":"logged_out","name":"","admin":false,"taxHref":"\/tax","showDisputeCenter":false,"baseUrl":"","helpCenterLink":"https:\/\/www.creditkarma.com\/events\/redirect\/external?eventcode=HelpCenterClick&eventinformation=9acb8337-2f2d-441c-b6b5-5d4ca268ec04&ovmtc=GlobalNaviMenu&s=__ck_bs&returnurl=https%3A%2F%2Fhelp.creditkarma.com%2Fhc%2Fen-us%3FtraceId%3D9acb8337-2f2d-441c-b6b5-5d4ca268ec04","queryParamL1":"?ckt=navClickL1","queryParamL2":"?ckt=navClickL2","navContext":null,"darwin":{"mono.corePages_indexController_transactionAccounts":false,"mono.navigation_web_moneyCenterTab":true,"mono.navigation_web_hideMyRecsBadge":false,"mono.taxhub_enabled":false,"mono.enableCardsInWallet":true,"mono.tax_navbar_inseason":false,"mono.navigation_web_nativeUpsell":"control","mono.tax_navbar_badge_text":"control","mono.tax_hub_holdout":false}}; return r; })(window.RETROVISION || {});</script><div id="5ce0bddfba6fc" class="retrovision-container"><style>.navi-logo{display:-ms-flexbox;display:flex;display:-webkit-flex;-ms-flex-align:center;align-items:center;-webkit-align-items:center;margin:.1rem .7rem 0;margin-right:1rem;width:7rem}.navi-logo svg{height:1rem;position:relative;bottom:.25rem}.navi-logo svg path{fill:#3ddb93}.navi-badge{background:#3ddb93;color:#fff;font-family:sans-serif;padding:.15rem .3rem;font-size:.625rem;border-radius:.6rem;font-weight:600;line-height:1;position:absolute;top:.75rem;font-style:normal;text-indent:0}.navi-badge[data-content=Tax]{border-radius:.1rem;display:inline-block;top:0;margin-left:.3rem;margin-right:-1rem;font-size:.6rem;padding:.16rem .3rem;position:relative;line-height:1.2;font-weight:400;text-transform:lowercase}.navi-badge[data-content=Tax]:first-letter{text-transform:uppercase}@media (min-width:1200px){.navi-badge[data-content=Tax]{font-size:.75rem}}.navi-bar_dropdown{position:absolute;top:100%;left:-.5rem;min-width:16rem;padding:0 0 .3rem;background:#fff;box-shadow:0 .125rem .25rem 0 rgba(0,0,0,.1);display:none}.navi-bar_dropdown>a{color:#5b5f66!important;line-height:1;text-decoration:none;display:block;padding:.8rem 1rem;margin:0}.navi-bar_dropdown>a .navi-icon{margin-right:.25rem;position:relative;bottom:.125rem}.navi-bar_dropdown>a .navi-icon path{fill:#5b5f66}.navi-bar_dropdown>a:active{background:#f1f5f8}.navi-bar_dropdown>a:hover{background:#f1f5f8;color:#5b5f66!important}.navi-bar_dropdown>a:hover .navi-icon path{fill:#f1f5f8}.navi-bar_dropdown.inRight{right:-.5rem;left:auto}@media (min-width:1200px){.navi-bar_dropdown{left:0}}.navi-bar_item{display:none;font-size:.75rem;position:relative;white-space:nowrap;transition:opacity .15s ease-in-out,-webkit-transform .15s ease-in-out;transition:transform .15s ease-in-out,opacity .15s ease-in-out;transition:transform .15s ease-in-out,opacity .15s ease-in-out,-webkit-transform .15s ease-in-out}.navi-bar_item.pinned{display:inline-block}.navi-bar_item .prefix,.navi-bar_item .suffix{display:none}.navi-bar_item.control .hasBadge .prefix{display:inline}.navi-bar_item>a{display:inline-block;text-decoration:none;color:#5b5f66!important;line-height:3rem;padding:0 .5rem}.navi-bar_item>a[href="#!"]{cursor:default}.navi-bar_item.icons>a{color:#5b5f66!important}.navi-bar_item>a.hasBadge{padding-right:1rem}.navi-bar_item .navi-icon path{fill:#8d9194!important}.navi-bar_item[data-text$="(Not you?)"],.navi-bar_item[data-text="How it works"]{display:inline-block}@media (min-width:1000px){.navi-bar_item{display:inline-block;margin-right:.5rem}.navi-bar_item>a{color:#5b5f66!important}.navi-bar_item:hover>a{color:#0091ff!important}.navi-bar_item .navi-icon{display:none}.navi-bar_item:hover .navi-bar_dropdown{display:block}.navi-bar_item.hasDropdown>a:after{content:"";display:inline-block;width:.5rem;height:.5rem;border-right:2px solid #8d9194;border-bottom:2px solid #8d9194;-webkit-transform:rotate(45deg) scale(.85);transform:rotate(45deg) scale(.85);margin-left:4px;position:relative;bottom:.125rem}.navi-bar_item.home{display:none}}@media (min-width:1200px){.navi-bar_item{margin:0;font-size:.875rem;padding:.5rem}.navi-bar_item.hasDropdown:after{-webkit-transform:rotate(45deg) scale(1);transform:rotate(45deg) scale(1)}.navi-bar_item .prefix,.navi-bar_item .suffix{display:inline}}@media (max-width:1000px){.navi-bar_item>a{padding-right:.25rem}.navi-bar_item.pinned{margin:0 .1rem}.navi-bar_item.icons.pinned{position:relative;height:100%;margin:0;-ms-flex-preferred-size:25%;flex-basis:25%;-webkit-flex-basis:25%;border-right:1px solid hsla(206,3%,57%,.25)}.navi-bar_item.icons.pinned a{display:-ms-flexbox;display:flex;display:-webkit-flex;-ms-flex-direction:column;flex-direction:column;-ms-flex-pack:justify;justify-content:space-between;-webkit-flex-direction:column;-webkit-justify-content:space-between;height:100%;-ms-flex-align:center;align-items:center;-webkit-align-items:center;font-size:.5rem;line-height:1;padding:.375rem .5rem;margin:0}.navi-bar_item.icons.pinned .navi-icon{margin-bottom:.125rem}.navi-bar_item.icons.pinned .navi-badge{position:absolute;left:calc(50% + .25rem);top:calc(50% - 1.25rem)}}.navi-hamburger{padding:0;background:none;border:0!important;outline:0;height:3.125rem;width:3.125rem;display:inline-block;position:relative;cursor:pointer;background-image:none!important;box-shadow:none!important}.navi-hamburger i,.navi-hamburger span{pointer-events:none}.navi-hamburger i{top:1.5rem;left:1rem;transition:-webkit-transform 225ms ease-in;transition:transform 225ms ease-in;transition:transform 225ms ease-in,-webkit-transform 225ms ease-in}.navi-hamburger i,.navi-hamburger i:after,.navi-hamburger i:before{display:inline-block;width:1.125rem;height:.125rem;background:#3ddb93;position:absolute;border-radius:.0625rem}.navi-hamburger i:after,.navi-hamburger i:before{content:"";left:0;top:-.4375rem;-webkit-transform-origin:0 0;transform-origin:0 0;transition:width 225ms ease-in,-webkit-transform 225ms ease-in;transition:transform 225ms ease-in,width 225ms ease-in;transition:transform 225ms ease-in,width 225ms ease-in,-webkit-transform 225ms ease-in}.navi-hamburger i:after{top:.4375rem}.navi-hamburger .navi-badge{display:none;opacity:1;transition:opacity 225ms ease-in-out}@media (min-width:1000px){.navi-hamburger{display:none}}#navi-open:checked~.navi-bar .navi-hamburger .navi-badge{opacity:0}#navi-open:checked~.navi-bar .navi-hamburger i{-webkit-transform:rotate(225deg);transform:rotate(225deg)}#navi-open:checked~.navi-bar .navi-hamburger i:after,#navi-open:checked~.navi-bar .navi-hamburger i:before{-webkit-transform:rotate(90deg) translate3d(-.0625rem,-.625rem,0);transform:rotate(90deg) translate3d(-.0625rem,-.625rem,0);width:.5625rem}#navi-open:checked~.navi-bar .navi-hamburger i:after{-webkit-transform:rotate(-90deg) translate3d(-.1875rem,.5rem,0);transform:rotate(-90deg) translate3d(-.1875rem,.5rem,0)}.navi-bar{-ms-flex-direction:row;flex-direction:row;-ms-flex-pack:justify;justify-content:space-between;-webkit-flex-direction:row;-webkit-justify-content:space-between;width:100%;height:auto;box-shadow:0 .125rem .25rem 0 rgba(0,0,0,.1);position:fixed;top:0;left:0;z-index:1200;background:#fff;transition:background .15s linear}.navi-bar,.navi-bar_left,.navi-bar_right{display:-ms-flexbox;display:flex;display:-webkit-flex}.navi-bar_left,.navi-bar_right{-ms-flex-align:stretch;align-items:stretch;-webkit-align-items:stretch}.navi-bar_left.icons .navi-logo{opacity:0;-webkit-transform:translate3d(-120%,50%,0);transform:translate3d(-120%,50%,0);bottom:50%;padding-top:.25rem;position:absolute;transition:opacity .15s ease-in-out,-webkit-transform .15s ease-in-out;transition:transform .15s ease-in-out,opacity .15s ease-in-out;transition:transform .15s ease-in-out,opacity .15s ease-in-out,-webkit-transform .15s ease-in-out}@media (min-width:1000px){.navi-bar{position:relative;background:#fff}.navi-bar_left.icons .navi-logo{opacity:1;-webkit-transform:translateZ(0);transform:translateZ(0);position:relative;bottom:auto;padding-top:0}.navi-bar_right{padding-right:.5rem}.navi-bar_right .navi-bar_item{padding-left:.5rem;padding-right:0;margin-right:0}.navi-bar_right .navi-bar_item.hasDropdown:after{margin-left:.5rem}.navi-bar_right .navi-bar_item>a{padding:0}.navi-bar_right .navi-bar_item .text{border-left:.0625rem solid #5b5f66;padding-left:.5rem}.navi-bar_right .navi-bar_item:first-child .text{border-left:0}}@media (min-width:1200px){.navi-bar_right{margin-right:10px}}@media (max-width:1000px){.navi-bar_left.icons{width:100%}}#navi-open:checked~.navi-bar .navi-bar_item{-webkit-transform:translate3d(-10vw,0,0);transform:translate3d(-10vw,0,0);opacity:0}#navi-open:checked~.navi-bar .navi-bar_left.icons .navi-logo{opacity:1;-webkit-transform:translate3d(0,50%,0);transform:translate3d(0,50%,0)}.navi-drawer_item{display:inline-block;width:100%;font-size:.875rem;line-height:3.5rem}.navi-drawer_item>a,.navi-drawer_item>label{color:#5b5f66!important;text-decoration:none;padding:0 1rem;display:block;border-bottom:.0625rem solid #d1d7db}.navi-drawer_item .navi-icon{display:none}.navi-drawer_item-link.hasCollapser,.navi-drawer_item>a.hasBadge{position:relative}.navi-drawer_item-link.hasCollapser:after{content:"";display:inline-block;width:.625rem;height:.625rem;border-top:.125rem solid #0091ff;border-right:.125rem solid #0091ff;-webkit-transform:rotate(45deg);transform:rotate(45deg);position:absolute;right:1rem;top:1.5rem;transition:-webkit-transform .15s ease-in-out;transition:transform .15s ease-in-out;transition:transform .15s ease-in-out,-webkit-transform .15s ease-in-out;pointer-events:none}.navi-drawer_item input[type=checkbox]+label:before{display:none}[type=checkbox]:checked~.navi-drawer_item-link.hasCollapser:after{-webkit-transform:rotate(135deg);transform:rotate(135deg)}.navi-drawer_item-collapsible{background:#f5f5f5;max-height:0;overflow:hidden;transition:max-height .3s ease-in-out}.navi-drawer_item-collapsible .navi-drawer_item{text-indent:1rem}[type=checkbox]:not(:checked)~.navi-drawer_item-collapsible{max-height:0!important}[type=checkbox]:checked~.navi-drawer_item-collapsible{max-height:1000px}.navi-drawer_item .navi-badge{display:inline-block;padding:.16rem .3rem;font-size:.7rem;border-radius:.6rem;font-weight:600;line-height:1;height:1rem;margin-left:.25rem;top:1rem}.navi-drawer_item .navi-badge[data-content=Tax]{border-radius:.1rem;top:0;margin-left:.3rem;font-weight:400;line-heigh
+t:1.1;font-size:.75rem;height:auto}.navi-drawer{position:fixed;z-index:1199;top:0;-webkit-transform:translateZ(0);transform:translateZ(0);left:-100vw;height:100%;width:100vw;padding-top:50px;transition:-webkit-transform .15s ease-in-out;transition:transform .15s ease-in-out;transition:transform .15s ease-in-out,-webkit-transform .15s ease-in-out;overflow:auto;background:#fff;-webkit-overflow-scrolling:touch}.navi-drawer_menu{-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;min-height:100%}.navi-drawer_menu,.navi-drawer_menu>div{display:-webkit-flex;display:-ms-flexbox;display:flex}.navi-drawer_menu>div{-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap}.navi-drawer_logout{display:block;line-height:3.5rem;background:#f1f5f8;color:#0091ff;text-decoration:none;text-align:center;width:100%;margin-top:.0625rem}.navi-drawer_logout:first-child{margin-top:3.5rem}@media (min-width:1000px){.navi-drawer{display:none}}#navi-open:checked~.navi-drawer{-webkit-transform:translate3d(100vw,0,0);transform:translate3d(100vw,0,0)}.navi{padding-bottom:3rem;line-height:0}@media (min-width:1000px){.navi{padding-bottom:0}}.navi *,.navi :after{box-sizing:border-box}body.robin-header .navi{font-size:16px}body.robin-header .navi button{border-radius:0;text-shadow:none}body.robin-header .navi button:hover{background-image:none}body.robin-header .navi button:active{box-shadow:none}@media (max-width:25rem){body.robin-header [ck-textinput] input{font-size:18px!important}}i.navi-icon{font-style:normal;font-size:21px;height:21px;width:21px}.navi-icon{-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;background-color:transparent;display:inline-block;font-style:normal;font-weight:400;position:relative;text-align:center;transition:all .15s ease-in-out;vertical-align:middle}.navi-icon svg,.navi-icon svg path{position:absolute;top:0;left:0}.navi-icon svg path{fill:#c4c4c4;transition:all .15s ease-in-out}.navi-icon-faint svg path{opacity:.5}</style><div data-reactroot=""><div><nav class="navi"><input type="checkbox" id="navi-open" style="display:none"/><div class="navi-bar"><div class="navi-bar_left"><a to="/" href="/?ckt=navClickL1" class="navi-logo"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 710 105" style="enable-background:new 0 0 710 105;" xml:space="preserve">
+<title>Student Loan Calculator</title>
+<style type="text/css">
+	.st0{fill:#3DDB93;}
+</style>
+<g>
+	<path class="st0" d="M442,30.5c-16.8,0-23.3,4.5-23.3,9.7c0,3.9,2.3,6.4,2.9,7c2.2-1.4,8.5-5,18.5-5c12.7,0,17.2,6,17.2,12.5v1.9
+		c-29.4,3.1-44.4,8.6-44.4,26.2c0,12,9,21,21.6,21c12.7,0,19.9-6.6,23.1-9.5v8.1h12.8V54.2C470.5,38.6,459.2,30.5,442,30.5z
+		 M457.3,83c-5.9,6.1-11.9,9.1-19.6,9.1c-7.4,0-11.4-4.8-11.4-9.8c0-7.2,5.8-13.3,30.9-15.7V83z M672.6,30.5
+		c-16.8,0-23.3,4.5-23.3,9.7c0,3.9,2.3,6.4,2.9,7c2.2-1.4,8.5-5,18.5-5c12.7,0,17.2,6,17.2,12.5v1.9c-29.4,3.1-44.4,8.6-44.4,26.2
+		c0,12,9,21,21.6,21c12.7,0,19.9-6.6,23.1-9.5v8.1H701V54.2C701,38.6,689.7,30.5,672.6,30.5z M687.9,83c-5.9,6.1-11.9,9.1-19.6,9.1
+		c-7.4,0-11.4-4.8-11.4-9.8c0-7.2,5.8-13.3,30.9-15.7V83z M258.5,17.8c-4.6,0-8.4-3.7-8.4-8.3c0-4.6,3.8-8.4,8.4-8.4
+		c4.6,0,8.3,3.8,8.3,8.4C266.7,14.1,263.1,17.8,258.5,17.8z M251.8,102.4V32H265v70.4H251.8z M120.4,72.9c19.6,0,45.4-3,45.4-23.6
+		c0-10.3-8.6-18.8-23.1-18.8c-24.4,0-36.1,17.1-36.1,37.8c0,19.8,12.8,35.6,35.6,35.6c12.7,0,22.2-3.5,22.2-10.7
+		c0-3.4-2.2-6.1-2.7-6.5c-1.3,0.8-8.1,5.5-18.7,5.5C128.1,92.1,121.9,82.5,120.4,72.9z M120.3,62.7c0.6-10.4,7.3-21,21.8-21
+		c6.5,0,10.4,3.7,10.4,8.2C152.5,60,134.2,62.7,120.3,62.7z M235.8,100.3c-2.7,0.7-11.2,3.6-23.6,3.6c-27.1,0-37.6-15.1-37.6-35.4
+		c0-25.7,14.6-38,31.1-38c9.2,0,15.3,2.9,17,3.7V2.8h13V100.3z M222.8,46.1c-1.6-1-7.3-3.9-14.6-3.9c-12.1,0-20.5,8.4-20.5,25.8
+		c0,15.5,7.8,24.1,24.5,24.1c3.9,0,7.5-0.6,10.6-1.5V46.1z M14.7,67.1c0-16.4,8.5-24.9,21.5-24.9c9.8,0,16.2,3.7,18.3,5
+		c1.6-1.5,2.9-4.2,2.9-7c0-4.7-5.5-9.7-21.7-9.7C16.8,30.5,1,43.2,1,67.3c0,23.5,14.3,36.6,33.2,36.6c11.3,0,20.4-3.6,23-5V85.8
+		c-2.9,2-12.2,6.3-20.8,6.3C24,92.1,14.7,83.7,14.7,67.1z M386.4,66.5c8.5-9.6,16.1-21,21.5-35L395.7,27
+		c-7.7,20.3-19.3,34-33.3,45.3V2.8h-13.1v99.6h13.1V87.7c5.1-3.6,9.6-7.3,14.5-11.8l12,20.3c3,5,7,7.7,13,7.7c3.4,0,5.3-1.1,6.1-1.5
+		L386.4,66.5z M81.5,40.9c0-6.9-3.9-10.4-9.1-10.4c-1.2,0-2.5,0.2-3.8,0.7v71.2h13.1V60.8c3.7-8.8,12.6-17,24.2-17V30.5
+		c-12.5,0-19.6,6-24.4,15V40.9z M499.6,40.9c0-6.9-3.9-10.4-9.1-10.4c-1.2,0-2.5,0.2-3.8,0.7v71.2h13.1V60.8
+		c3.7-8.8,12.6-17,24.2-17V30.5c-12.5,0-19.6,6-24.4,15V40.9z M545.5,41.2v-0.3c0-6.9-3.7-10.4-8.9-10.4c-1.2,0-2.5,0.2-3.8,0.7
+		v71.2h13.1V53.7c3.9-5.3,11.8-11.5,18.8-11.5c7.7,0,11.5,5,11.5,12.2v48h13.1V53.7c4.5-6.1,11.8-11.5,18.8-11.5
+		c7.7,0,11.5,5,11.5,12.2v48h13.1V53.7c0-13.3-6-23.2-22.2-23.2c-9.9,0-17.2,5.3-23.1,11.8c-2-4.7-6.5-11.8-20.3-11.8
+		C557.6,30.5,550.8,35.5,545.5,41.2z M281.2,15v68.2c0,13.5,8.4,20.7,20.8,20.7c5.9,0,11.2-1.5,12.4-1.9V90.7
+		c-1.1,0.3-4.7,1.4-9.5,1.4c-7.3,0-10.6-4.5-10.6-10.5V43h18.2V32h-18.2v-7.2c0-6.9-4.1-10.4-9.4-10.4
+		C283.7,14.3,282.4,14.5,281.2,15z"/>
+	<g>
+		<path class="st0" d="M691.8,17.1h6.5v1.3h-2.4v7.4h-1.7v-7.4h-2.4V17.1z M707.1,25.9c0-2.2-0.2-4.9-0.7-7.1
+			c-1.1,1.6-1.8,3.5-2.1,5.3h-1c-0.3-1.8-1.1-3.7-2.1-5.3c-0.5,2.2-0.7,4.9-0.7,7.1h-1.7c0-2.8,0.3-6,1-8.7h1.5
+			c0.9,1.1,1.9,2.8,2.4,4.4c0.6-1.6,1.5-3.4,2.4-4.4h1.5c0.7,2.7,1,6,1,8.7H707.1z"/>
+	</g>
+</g>
+</svg>
+</a><div class="navi-bar_item hasDropdown" data-text="Cards"><a class="" href="/credit-cards?ckt=navClickL1"><span class="text"><span class="prefix">Credit </span>Cards</span></a><div class="navi-bar_dropdown"><a class="navi-bar_item " href="/credit-cards?ckt=navClickL2"><span class="text">Best Credit Cards</span></a><a class="navi-bar_item " href="/credit-cards/search-cc?ckt=navClickL2"><span class="text">Search All Credit Cards</span></a><a class="navi-bar_item " href="/credit-cards/balance-transfer?ckt=navClickL2"><span class="text">Balance Transfer</span></a><a class="navi-bar_item " href="/credit-cards/low-interest?ckt=navClickL2"><span class="text">Low Interest</span></a><a class="navi-bar_item " href="/credit-cards/rewards-cards?ckt=navClickL2"><span class="text">Rewards</span></a><a class="navi-bar_item " href="/credit-cards/cash-back-cards?ckt=navClickL2"><span class="text">Cash Back</span></a><a class="navi-bar_item " href="/credit-cards/airline-credit-cards?ckt=navClickL2"><span class="text">Airline</span></a><a class="navi-bar_item " href="/credit-cards/student-cards?ckt=navClickL2"><span class="text">Student</span></a><a class="navi-bar_item " href="/credit-cards/business-credit-cards?ckt=navClickL2"><span class="text">Business Cards</span></a></div></div><div class="navi-bar_item hasDropdown" data-text="Loans"><a class="" href="/shop/personal-loans?ckt=navClickL1"><span class="text">Loans</span></a><div class="navi-bar_dropdown"><a class="navi-bar_item " href="/shop/personal-loans?ckt=navClickL2"><span class="text">Personal Loans</span></a><a class="navi-bar_item " href="/home-loans?ckt=navClickL2"><span class="text">Home Loans</span></a><a class="navi-bar_item " href="/shop/autos/index/type/newpurchase?ckt=navClickL2"><span class="text">Auto Loans</span></a><a class="navi-bar_item " href="/shop/student-loans?ckt=navClickL2"><span class="text">Student Loans</span></a><a class="navi-bar_item " href="/shop/business-loans?ckt=navClickL2"><span class="text">Business Loans</span></a></div></div><div class="navi-bar_item hasDropdown" data-text="Auto"><a class="" href="/shop/autos/index/type/newpurchase?ckt=navClickL1"><span class="text">Auto</span></a><div class="navi-bar_dropdown"><a class="navi-bar_item " href="/shop/autos/index/type/refinance?ckt=navClickL2"><span class="text">Refinance My Loan</span></a><a class="navi-bar_item " href="/shop/autos/index/type/newpurchase?ckt=navClickL2"><span class="text">Get a New Loan</span></a><a class="navi-bar_item " href="/shop/auto-insurance?ckt=navClickL2"><span class="text">Auto Insurance</span></a></div></div><div class="navi-bar_item hasDropdown" data-text="Resources"><a class="" href="#!"><span class="text">Resources</span></a><div class="navi-bar_dropdown"><a class="navi-bar_item " href="/id-monitoring?ckt=navClickL2"><span class="text">Identity Monitoring</span></a><a class="navi-bar_item " href="/unclaimed-money?ckt=navClickL2"><span class="text">Unclaimed Money</span></a><a class="navi-bar_item " href="/reviews?ckt=navClickL2"><span class="text">Reviews</span></a><a class="navi-bar_item " href="/credit-cards/i?ckt=navClickL2"><span class="text">Articles</span></a><a class="navi-bar_item " href="/tools?ckt=navClickL2"><span class="text">Tools</span></a><a class="navi-bar_item " href="/all/advice?ckt=navClickL2"><span class="text">Community</span></a><a class="navi-bar_item " href="https://blog.creditkarma.com/"><span class="text">Blog</span></a><div class="navi-bar_item" data-text="Help center"><a class="" href="https://www.creditkarma.com/events/redirect/external?eventcode=HelpCenterClick&amp;eventinformation=9acb8337-2f2d-441c-b6b5-5d4ca268ec04&amp;ovmtc=GlobalNaviMenu&amp;s=__ck_bs&amp;returnurl=https%3A%2F%2Fhelp.creditkarma.com%2Fhc%2Fen-us%3FtraceId%3D9acb8337-2f2d-441c-b6b5-5d4ca268ec04"><span class="text">Help center</span></a></div><div class="navi-bar_item pinned" data-text="Log in"><span class="suffix"> for free</span></span></a></div><label class="navi-hamburger" for="navi-open"><i></i><span class="navi-badge">1</span></label></div></div><div class="navi-drawer"><div class="navi-drawer_menu"><div><div class="navi-drawer_item"><input type="checkbox" id="navi-Cards" style="display:none;pointer-events:none"/><label class="navi-drawer_item-link hasCollapser" href="/credit-cards?ckt=navClickL1" for="navi-Cards" data-has-collapser="true"><span class="text"><span class="prefix">Credit </span>Cards</span></label><div class="navi-drawer_item-collapsible" style="max-height:522px"><div class="navi-drawer_item"><a class="" href="/credit-cards?ckt=navClickL2" data-parent-slug="navi-Cards"><span class="text">Best Credit Cards</span></a></div><div class="navi-drawer_item"><a class="" href="/credit-cards/search-cc?ckt=navClickL2" data-parent-slug="navi-Cards"><span class="text">Search All Credit Cards</span></a></div><div class="navi-drawer_item"><a class="" href="/credit-cards/balance-transfer?ckt=navClickL2" data-parent-slug="navi-Cards"><span class="text">Balance Transfer</span></a></div><div class="navi-drawer_item"><a class="" href="/credit-cards/low-interest?ckt=navClickL2" data-parent-slug="navi-Cards"><span class="text">Low Interest</span></a></div><div class="navi-drawer_item"><a class="" href="/credit-cards/rewards-cards?ckt=navClickL2" data-parent-slug="navi-Cards"><span class="text">Rewards</span></a></div><div class="navi-drawer_item"><a class="" href="/credit-cards/cash-back-cards?ckt=navClickL2" data-parent-slug="navi-Cards"><span class="text">Cash Back</span></a></div><div class="navi-drawer_item"><a class="" href="/credit-cards/airline-credit-cards?ckt=navClickL2" data-parent-slug="navi-Cards"><span class="text">Airline</span></a></div><div class="navi-drawer_item"><a class="" href="/credit-cards/student-cards?ckt=navClickL2" data-parent-slug="navi-Cards"><span class="text">Student</span></a></div><div class="navi-drawer_item"><a class="" href="/credit-cards/business-credit-cards?ckt=navClickL2" data-parent-slug="navi-Cards"><span class="text">Business Cards</span></a></div></div></div><div class="navi-drawer_item"><input type="checkbox" id="navi-Loans" style="display:none;pointer-events:none"/><label class="navi-drawer_item-link hasCollapser" href="/shop/personal-loans?ckt=navClickL1" for="navi-Loans" data-has-collapser="true"><span class="text">Loans</span></label><div class="navi-drawer_item-collapsible" style="max-height:290px"><div class="navi-drawer_item"><a class="" href="/shop/personal-loans?ckt=navClickL2" data-parent-slug="navi-Loans"><span class="text">Personal Loans</span></a></div><div class="navi-drawer_item"><a class="" href="/home-loans?ckt=navClickL2" data-parent-slug="navi-Loans"><span class="text">Home Loans</span></a></div><div class="navi-drawer_item"><a class="" href="/shop/autos/index/type/newpurchase?ckt=navClickL2" data-parent-slug="navi-Loans"><span class="text">Auto Loans</span></a></div><div class="navi-drawer_item"><a class="" href="/shop/student-loans?ckt=navClickL2" data-parent-slug="navi-Loans"><span class="text">Student Loans</span></a></div><div class="navi-drawer_item"><a class="" href="/shop/business-loans?ckt=navClickL2" data-parent-slug="navi-Loans"><span class="text">Business Loans</span></a></div></div></div><div class="navi-drawer_item"><input type="checkbox" id="navi-Auto" style="display:none;pointer-events:none"/><label class="navi-drawer_item-link hasCollapser" href="/shop/autos/index/type/newpurchase?ckt=navClickL1" for="navi-Auto" data-has-collapser="true"><span class="text">Auto</span></label><div class="navi-drawer_item-collapsible" style="max-height:174px"><div class="navi-drawer_item"><a class="" href="/shop/autos/index/type/refinance?ckt=navClickL2" data-parent-slug="navi-Auto"><span class="text">Refinance My Loan</span></a></div><div class="navi-drawer_item"><a class="" href="/shop/autos/index/type/newpurchase?ckt=navClickL2" data-parent-slug="navi-Auto"><span class="text">Get a New Loan</span></a></div><div class="navi-drawer_item"><a class="" href="/shop/auto-insurance?ckt=navClickL2" data-parent-slug="navi-Auto"><span class="text">Auto Insurance</span></a></div></div></div><div class="navi-drawer_item"><input type="checkbox" id="navi-Resources" style="display:none;pointer-events:none"/><label class="navi-drawer_item-link hasCollapser" href="#!" for="navi-Resources" data-has-collapser="true"><span class="text">Resources</span></label><div class="navi-drawer_item-collapsible" style="max-height:464px"><div class="navi-drawer_item"><a class="" href="/id-monitoring?ckt=navClickL2" data-parent-slug="navi-Resources"><span class="text">Identity Monitoring</span></a></div><div class="navi-drawer_item"><a class="" href="/unclaimed-money?ckt=navClickL2" data-parent-slug="navi-Resources"><span class="text">Unclaimed Money</span></a></div><div class="navi-drawer_item"><a class="" href="/reviews?ckt=navClickL2" data-parent-slug="navi-Resources"><span class="text">Reviews</span></a></div><div class="navi-drawer_item"><a class="" href="/credit-cards/i?ckt=navClickL2" data-parent-slug="navi-Resources"><span class="text">Articles</span></a></div><div class="navi-drawer_item"><a class="" href="/tools?ckt=navClickL2" data-parent-slug="navi-Resources"><span class="text">Tools</span></a></div><div class="navi-drawer_item"><a class="" href="/all/advice?ckt=navClickL2" data-parent-slug="navi-Resources"><span class="text">Community</span></a></div><div class="navi-drawer_item"><a class="" href="https://blog.creditkarma.com/" data-parent-slug="navi-Resources"><span class="text">Blog</span></a></div><div class="navi-drawer_item"><a class="" href="/faq/howitworks?ckt=navClickL2" data-parent-slug="navi-Resources"><span class="text">How it works</span></a></div></div></div><div class="navi-drawer_item"><a class="navi-drawer_item-link" href="/tax" data-has-collapser="false"><span class="text">Tax</span></a><div class="navi-drawer_item-collapsible"></div></div><div class="navi-drawer_item"><a class="navi-drawer_item-link" href="/faq/howitworks?ckt=navClickL1" data-has-collapser="false"><span class="text">How it works</span></a><div class="navi-drawer_item-collapsible"></div></div><div class="navi-drawer_item"><a class="navi-drawer_item-link" href="https://www.creditkarma.com/events/redirect/external?eventcode=HelpCenterClick&amp;eventinformation=9acb8337-2f2d-441c-b6b5-5d4ca268ec04&amp;ovmtc=GlobalNaviMenu&amp;s=__ck_bs&amp;returnurl=https%3A%2F%2Fhelp.creditkarma.com%2Fhc%2Fen-us%3FtraceId%3D9acb8337-2f2d-441c-b6b5-5d4ca268ec04" data-has-collapser="false"><span class="text">Help center</span></a><div class="navi-drawer_item-collapsible"></div></div></div></div></div></nav></div></div><script>!function(){function clickListener(e){var linkNode=e.target;linkNode.nodeName!==LINK_TAG&&(linkNode.parentNode.nodeName===LINK_TAG?linkNode=linkNode.parentNode:linkNode.parentNode.parentNode.nodeName===LINK_TAG&&(linkNode=linkNode.parentNode.parentNode));var linkHasCollapser="true"===linkNode.getAttribute("data-has-collapser"),linkToContext=linkNode.getAttribute("data-to-context"),linkParentSlug=linkNode.getAttribute("data-parent-slug"),linkTo=linkNode.getAttribute("to");if("navi-open"===linkNode.getAttribute("for")&&toggleBodyOverflow(!naviOpen.checked),linkHasCollapser)return void scrollTo(0,linkNode.offsetTop-50,naviDrawer,300);if(linkParentSlug&&(document.getElementById(linkParentSlug).checked=!1),linkTo&&!linkHasCollapser&&linkToContext===navContext){e.preventDefault();var event=document.createEvent("CustomEvent");event.initCustomEvent("navi-click",!0,!0,{to:linkTo}),linkNode.dispatchEvent(event),naviOpen.checked=!1,toggleBodyOverflow(!1)}}function toggleBodyOverflow(bool){return document.body.style.overflow=bool?"hidden":"auto"}function scrollTo(x,y,container,duration){function easing(pos){return Math.sin(pos*(Math.PI/2))}function tick(timestamp){start||(start=timestamp);var elapsed=timestamp-start,step=easing(elapsed/duration);elapsed<duration?(window.requestAnimationFrame(tick),container.scrollTop=scrollTop+(y-scrollTop)*step,container.scrollLeft=scrollLeft+(x-scrollLeft)*step):(container.scrollTop=y,container.scrollLeft=x)}var start,scrollTop=container.scrollTop,scrollLeft=container.scrollLeft;window.requestAnimationFrame(tick)}var naviOpen=document.getElementById("navi-open"),naviDrawer=document.querySelector(".navi-drawer"),navContext=document.querySelector("[data-nav-context]");navContext=navContext&&navContext.getAttribute("data-nav-context")||!1;var LINK_TAG="A";"undefined"!=typeof window&&function(){var navi=document.querySelector(".navi");navi.addEventListener("click",clickListener)}()}();</script></div>
+
+<span ck-navicon></span>
+<main ck-main="sidebar sidebar-responsive">
+    <section class="main">
+        <div id="financial-tools">
+    <div id="aboutUs">
+        <!--
+Start of DoubleClick Floodlight Tag: Please do not remove
+Activity name of this tag: Debt Calculator
+URL of the webpage where the tag is expected to be placed: https://www.creditkarma.com/calculators/debtrepayment
+This tag must be placed between the <body> and </body> tags, as close as possible to the opening tag.
+Creation Date: 06/11/2014
+-->
+<script type="text/javascript">
+    var axel = Math.random() + "";
+    var a = axel * 10000000000000;
+    document.write('<iframe src="https://4449091.fls.doubleclick.net/activityi;src=4449091;type=Calcu0;cat=DebtC0;ord=' + a + '?" width="1" height="1" frameborder="0" style="display:none"></iframe>');
+</script>
+<noscript>
+    <iframe src="https://4449091.fls.doubleclick.net/activityi;src=4449091;type=Calcu0;cat=DebtC0;ord=1?" width="1" height="1" frameborder="0" style="display:none"></iframe>
+</noscript>
+<!-- End of DoubleClick Floodlight Tag: Please do not remove --> 
+
+<section id="tools-overview-title-section">
+    <header>
+        <h1 ck-header="page"> Student Loan Repayment</h1>
+    </header>
+    <span class="toolsDebtRepaymentLargeImage toolsIntroImage"></span>
+    <p class="subtitle" ck-text> The Student Loan Repayment Calculator will show you how long it will take to pay off your student debt.
+        Choose from making the minimum payment, a fixed amount of your choosing, or a time when you would prefer to be debt free. </p>
+</section>
+
+<section id="debt-calculator-input" ck-card>
+                <div class="calculatorGrayBox"  data-fh-impression="{&quot;section&quot;:&quot;DebtRepaymentCalculatorInput&quot;,&quot;renderId&quot;:408276689}">
+
+                <header>
+                    <h2 ck-header="sub">
+                        Student Loan Repayment Calculator
+                    </h2>
+                </header>
+                <form ck-form>
+                    <div class="formList">
+                        <label for="balanceVal">
+                            <span ck-badge>
+                                <b>1</b>
+                            </span>
+                            <div class="inputType">
+                            Balance Owed
+                            </div>
+                        </label>
+                          <div ck-textinput="currency">
+                            <div ck-textinput=><input type="text" id="balanceVal" name="balanceVal" class="reg-input validatePositiveNumber pre-populated" size="10" value="" /><span class="postInput">$</span><div style='' class='validation-advice validation-failed' id='advice-balanceVal'></div></div>
+                        </div>
+                    </div>
+                    <div class="formList">
+                        <label for="debtRateVal">
+                            <span ck-badge>
+                                <b>2</b>
+                            </span>
+                            <div class="inputType">
+                            Interest Rate
+                            </div>
+                        </label>
+                        <div ck-textinput="percentage">
+                            <div ck-textinput=><input type="text" id="debtRateVal" name="debtRateVal" class="reg-input validatePositiveNumber pre-populated" size="10" value="" /><span class="postInput">%</span><div style='' class='validation-advice validation-failed' id='advice-debtRateVal'></div></div>                        </div>
+                    </div>
+                    <div class="formList">
+                        <label for="debtMonthVal">
+                            <span ck-badge>
+                                <b>3A</b>
+                            </span>
+                            <div class="inputType">
+                            Expected Monthly Payment
+                            </div>
+                        </label>
+                        <div ck-textinput="currency">
+                            <div ck-textinput=><input type="text" id="debtMonthVal" name="debtMonthVal" class="reg-input validatePositiveNumber-NotRequired pre-populated" size="10" value="" /><span class="postInput">$</span><div style='' class='validation-advice validation-failed' id='advice-debtMonthVal'></div></div>                        </div>
+                    </div>
+                    <p class="orDivider" ck-header>or</p>
+                    <div class="noBorder formList">
+                        <label for="payoffTime">
+                            <span ck-badge>
+                                <b>3B</b>
+                            </span>
+                            <div class="inputType">
+                            Desired Payoff Timeframe
+                                </div>
+                        </label>
+
+                        <div ck-textinput="months">
+                            <div ck-textinput=><input type="text" id="payoffTime" name="payoffTime" class="reg-input validatePositiveNumber-NotRequired pre-populated" size="10" value="" /><span class="postInput">Months</span><div style='' class='validation-advice validation-failed' id='advice-payoffTime'></div></div>                        </div>
+                    </div>
+                    <div class="calculator-input-submit">
+                        <input id="loanCalculate" onclick="CK.Legacy.Tools.DebtRepayment.updateDebtResults('balance'); CK.Legacy.Tools.CKCalculators.scrollToResult(); return false;" ck-button="blue" type="submit" title="Calculate" value="Calculate"  data-renderId="408276689" />
+                    </div>
+                </form>
+        </div>
+</section>
+<section class="calculatorSection">
+
+    <div id="debt-repayment-calculator-output" class="calculatorDetailBox " ck-card  data-fh-impression="{&quot;section&quot;:&quot;AdditionalDebtRepaymentInformation&quot;,&quot;renderId&quot;:1740566692}" >
+        <h2 ck-header="sub">Additional Debt Repayment Information</h2>
+        <h3 ck-header>Full Payoff</h3>
+        <div class="calculationsTable">
+            <table ck-table>
+                <thead>
+                    <tr>
+                        <th>Balance</th>
+                        <th>Interest Rate</th>
+                        <th>Expected Monthly Payment</th>
+                        <th class="monthlyPayments">Expected Payoff Time</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td id="balance" data-label="Balance">&mdash;</td>
+                        <td id="interestRate" data-label="Interest Rate">&mdash;</td>
+                        <td id="expectedMonthlyPayment" data-label="Expected Monthly Payment">&mdash;</td>
+                        <td id="payoffTimeSummary" class="monthlyPayments" data-label="Expected Payoff Time">&mdash;</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+
+    <div ck-card="debt-repayment-charts" class="calculatorDetailBox"  data-fh-impression="{&quot;section&quot;:&quot;DebtRepaymentChart&quot;,&quot;renderId&quot;:1580542492}">
+        <h2 ck-header class="calculatorSubHeader">Debt Repayment Chart</h2>
+        <div id="debtChart" class="debtChartSection">
+            <img src="https://creditkarmacdn-a.akamaihd.net/ckfiles.com/assets/1086467273919/res/images/tools/pie-chart-fpo.png" alt="Debt Repayment Chart" />
+        </div>
+        <div class="toolsChart " id="debtChartRight">
+            <table class="debtRepaymentTable" ck-table>
+                <tr>
+                    <td>Principal: </td>
+                    <td class="inputRight"><span id="chartprincipal" >&mdash;</span></td>
+                </tr>
+                <tr>
+                    <td>Interest:</td>
+                    <td class="inputRight"><span id="chartinterest" >&mdash;</span></td>
+                </tr>
+            </table>
+            <p>Click on the chart to see how much interest you will pay over the life of the debt.</p>
+        </div>
+    </div>
+
+<section id="debt-repayment-calculator-details" class="calculator-details" ck-card  data-fh-impression="{&quot;section&quot;:&quot;SeeYourOptions&quot;,&quot;renderId&quot;:2117776668}">
+    <header>
+        <h2 ck-header class="calculatorSubHeader">See Your Options</h2>
+    </header>
+
+    <table class="loanOptionsTable" ck-table>
+        <tr>
+            <td>
+                <p onclick="CK.Legacy.Tools.DebtRepayment.updateDebtResults('balance')" id="balanceBtn">See Additional Balances</p>
+            </td>
+            <td>
+                <p onclick="CK.Legacy.Tools.DebtRepayment.updateDebtResults('debtRates')" id="debtRatesBtn">See Additional Rates</p>
+            </td>
+            <td>
+                <p onclick="CK.Legacy.Tools.DebtRepayment.updateDebtResults('payments')" id="paymentsBtn">See Additional Payments</p>
+            </td>
+        </tr>
+    </table>
+    <table class="loanOutputTable" ck-table>
+        <thead>
+            <tr>
+                <th>Details</th>
+                <th id="colBalanceHeader">Balance</th>
+                <th id="colIntHeader">Interest Rate</th>
+                <th id="colPaymentsHeader">Expected Monthly Payment</th>
+                <th class="monthlyPayments"><p>Expected Payoff Time</p></th>
+            </tr>
+        </thead>
+        <tr>
+            <td>Decrease by 30%</td>
+            <td id="colBalance-30" data-label="Balance"></td>
+            <td id="colInt-30" data-label="Interest Rate"></td>
+            <td id="colPayments-30" data-label="Expected Monthly Payment"></td>
+            <td id="colMoToPay-30" class="monthlyPayments" data-label="Expected Payoff Time"></td>
+        </tr>
+        <tr>
+            <td>Decrease by 20%</td>
+            <td id="colBalance-20" data-label="Balance"></td>
+            <td id="colInt-20" data-label="Interest Rate"></td>
+            <td id="colPayments-20" data-label="Expected Monthly Payment"></td>
+            <td id="colMoToPay-20" class="monthlyPayments" data-label="Expected Payoff Time"></td>
+        </tr>
+        <tr>
+            <td>Decrease by 10%</td>
+            <td id="colBalance-10" data-label="Balance"></td>
+            <td id="colInt-10" data-label="Interest Rate"></td>
+            <td id="colPayments-10" data-label="Expected Monthly Payment"></td>
+            <td id="colMoToPay-10" class="monthlyPayments" data-label="Expected Payoff Time"></td>
+        </tr>
+        <tr>
+            <td>Increase by 10%</td>
+            <td id="colBalance10" data-label="Balance"></td>
+            <td id="colInt10" data-label="Interest Rate"></td>
+            <td id="colPayments10" data-label="Expected Monthly Payment"></td>
+            <td id="colMoToPay10" class="monthlyPayments" data-label="Expected Payoff Time"></td>
+        </tr>
+        <tr>
+            <td>Increase by 20%</td>
+            <td id="colBalance20" data-label="Balance"></td>
+            <td id="colInt20" data-label="Interest Rate"></td>
+            <td id="colPayments20" data-label="Expected Monthly Payment"></td>
+            <td id="colMoToPay20" class="monthlyPayments" data-label="Expected Payoff Time"></td>
+        </tr>
+        <tr>
+            <td>Increase by 30%</td>
+            <td id="colBalance30" data-label="Balance"></td>
+            <td id="colInt30" data-label="Interest Rate"></td>
+            <td id="colPayments30" data-label="Expected Monthly Payment"></td>
+            <td id="colMoToPay30" class="monthlyPayments" data-label="Expected Payoff Time"></td>
+        </tr>
+    </table>
+</section>
+
+</section>
+    </div>
+    <div class="clear"></div>
+</div>
+    </section>
+    
+                    <span>YourMoneyFlows Blog</span>
+                </a>
+            </li>
+        </ul>
+    </section>
+    
+    
+</aside>
+
+    </aside>
+</main>
+
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        [].forEach.call(
+            // the slash literal in this href will be encoded as %2F if
+            // we're already passing through events/redirect
+            document.querySelectorAll('.navi a[href*="/tax"]'),
+            function(el) {
+                el.addEventListener(
+                    'click',
+                    function(e) {
+                        e.preventDefault();
+                        var baseUrl = window.location.hostname === 'accounts.creditkarma.com' ? 'https://www.creditkarma.com' : '';
+                        window.location = baseUrl + '/events/redirect/external?eventcode=TaxNavClick&returnurl=' + encodeURIComponent(el.href);
+                    },
+                    false
+                );
+            }
+        );
+    });
+</script>
+
+    
+</body>
+</html>
+
