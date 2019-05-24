@@ -5,16 +5,6 @@ MoneyFlows consists of a web-based tool designed to facilate new grads to manage
 * Express - fast node.js network app framework
 * [Dialogflow](https://dialogflow.com/) - a cloud platform that provides several NLP functions that parse user input and match them to the right response
 
-## Demo - budget calculator
-Here is a quick demo of the budget calculator:
-
-![pic 1](/img/landpage.png)
-
-![pic 2](/img/web1.png)
-
-![pic 3](/img/web2.png)
-
-
 ## Demo - chatbot
 Here is a quick demo of the investment advisor (chatbot):
 
@@ -30,20 +20,6 @@ MoneyFlows requires [Node.js](https://nodejs.org/) v10+ to run.
 
 Install the dependencies and devDependencies and start the server.
 
-```sh
-$ cd dillinger
-$ npm install -d
-$ node app
-```
-
-For production environments...
-
-```sh
-$ npm install --production
-$ NODE_ENV=production node app
-```
-
-### How to run
 To get started, clone the repo into the local directory:
 ```sh
 $ git clone https://github.com/ruhacks2019/MoneyFlows
@@ -64,3 +40,16 @@ $ ./ngrok http 5000
 Add corresponding webhook to the Facebook page in order to link to the chatbot.
 
 Test the [chatbot](m.me/2229489643807919) on Messenger!
+
+
+## Demo - budget calculator
+Here is a quick demo of the budget calculator:
+
+![pic 1](/img/landpage.png)
+
+![pic 2](/img/web1.png)
+
+![pic 3](/img/web2.png)
+
+
+
